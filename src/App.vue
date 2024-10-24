@@ -97,7 +97,7 @@ const showAlert = () => {
 const updateTitle = () => {
   setTimeout(() => {
     document.title = `${Math.floor(score.value)} Score - Button Clicker` 
-  }, 1000)
+  }, 2500)
 }
 </script>
 
