@@ -51,6 +51,7 @@ const currentImage = ref('./assets/buttonatas.png')
 
 const scoreTambah = () => {
   score.value += scorePC.value;
+  updateTitle()
   animatedScore.value = true;
   setTimeout(() => {
     animatedScore.value = false;
@@ -92,6 +93,12 @@ const upgradePC = () => {
 const showAlert = () => {
   alert('Button sudah mencapai level maksimal!');
 };
+
+const updateTitle = () => {
+  setTimeout(() => {
+    document.title = `${Math.floor(score.value)} Score - Button Clicker` 
+  }, 1000)
+}
 </script>
 
 <style scoped>
